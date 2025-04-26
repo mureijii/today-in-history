@@ -1,0 +1,65 @@
+/* App Container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  min-height: 100vh;
+}
+
+main {
+  padding: 2rem 0;
+  position: relative;
+}
+
+/* No Events Message */
+.no-events {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.no-events h3 {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.no-events p {
+  color: #888;
+}
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;500;600&display=swap');
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  
+  main {
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,206 @@
+/* Event Card Styles */
+.event-card {
+  width: 45%;
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.event-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.event-card.expanded {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Favorite Button */
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #F59E0B;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s;
+  padding: 4px;
+  line-height: 1;
+}
+
+.favorite-button:hover {
+  transform: scale(1.1);
+}
+
+.favorite-button.active {
+  color: #D97706;
+}
+
+/* Event Year Badge */
+.event-year {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: white;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 16px;
+  position: absolute;
+  top: -12px;
+  z-index: 2;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4);
+}
+
+.event-card.left .event-year {
+  right: 20px;
+}
+
+.event-card.right .event-year {
+  left: 20px;
+}
+
+/* Event Content */
+.event-content {
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.event-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Category Badge */
+.event-category {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.category-label {
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+/* Category-specific styling */
+.event-card[data-category="tech"] .category-label,
+.event-card[data-category="science"] .category-label {
+  background-color: #EFF6FF;
+  color: #3B82F6;
+}
+
+.event-card[data-category="literature"] .category-label,
+.event-card[data-category="culture"] .category-label {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+.event-card[data-category="politics"] .category-label,
+.event-card[data-category="religion"] .category-label {
+  background-color: #FEE2E2;
+  color: #DC2626;
+}
+
+.event-card[data-category="economics"] .category-label,
+.event-card[data-category="sports"] .category-label {
+  background-color: #ECFDF5;
+  color: #059669;
+}
+
+/* Event Details (expanded state) */
+.event-details {
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.event-description {
+  line-height: 1.6;
+  color: #4B5563;
+  margin-bottom: 1.5rem;
+}
+
+.event-image-container {
+  width: 100%;
+  height: 180px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.event-image:hover {
+  transform: scale(1.05);
+}
+
+.event-source {
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  margin-top: 1rem;
+}
+
+.event-source span {
+  color: #6B7280;
+  font-weight: 500;
+}
+
+/* Expand button */
+.expand-button {
+  background: none;
+  border: none;
+  color: #9CA3AF;
+  font-size: 0.8rem;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  transition: color 0.2s;
+}
+
+.expand-button:hover {
+  color: #3B82F6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .event-card {
+    width: 100%;
+  }
+  
+  .event-year {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+  }
+  
+  .event-content {
+    padding: 1.25rem;
+  }
+  
+  .event-title {
+    font-size: 1.1rem;
+  }
+  
+  .event-image-container {
+    height: 150px;
+  }
+}
